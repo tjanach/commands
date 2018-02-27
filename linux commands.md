@@ -22,7 +22,12 @@ finds man topics only in command titles
 ```sh
 man -af <e.g. printf> 
 ``` 
+updates man pages
+```sh
+mandb - in ubuntu
+makewhatis - in red hat
+```
 
 # whatis
 whatis <command, e.g. git>
-answears wheather provided command is installed or not
+answears whether provided command is installed or not
