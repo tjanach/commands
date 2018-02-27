@@ -10,3 +10,7 @@ e.g.
 $ man 1 passwd
 $ man 5 passwd
 ```
+```sh
+man -k <part of command name, e.g. printf> 
+``` 
+- finds all commands containing the keyword 
