@@ -58,7 +58,8 @@ du <filenam or directory>
 ```
 finds amount of space taken by the file or directory
 ```sh
-du -h -max-depth=1 *
+du -h --max-depth=1 *
+du -h -d=1 *
 ```
 finds files or directories sizes in the current location in human readible format
 
