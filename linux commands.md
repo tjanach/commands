@@ -10,7 +10,13 @@ e.g.
 $ man 1 passwd
 $ man 5 passwd
 ```
+finds all commands containing the keyword
 ```sh
 man -k <part of command name, e.g. printf> 
 ``` 
-- finds all commands containing the keyword 
+ 
+finds all man topics related to the keyword
+```sh
+man -a <e.g. printf> 
+``` 
+
