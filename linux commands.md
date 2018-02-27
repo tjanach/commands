@@ -35,8 +35,8 @@ whatis <command, e.g. git>
 answears whether provided command is installed or not
 
 
-# what
+# which
 ```sh
-what <command, e.g. git>
+which <command, e.g. git>
 ```
 finds path to command
