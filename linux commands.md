@@ -29,5 +29,14 @@ makewhatis - in red hat
 ```
 
 # whatis
+```sh
 whatis <command, e.g. git>
+```
 answears whether provided command is installed or not
+
+
+# what
+```sh
+what <command, e.g. git>
+```
+finds path to command
