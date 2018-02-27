@@ -1,0 +1,6 @@
+man [number] command
++ 1 - commands and applications
++ 2 - system calls
++ 3 - library calls
++ 4 - drivers
++ 5 - files
