@@ -58,8 +58,14 @@ du <filenam or directory>
 ```
 finds amount of space taken by the file or directory
 ```sh
-du -h -max-deph=1 *
+du -h -max-depth=1 *
 ```
 finds files or directories sizes in the current location in human readible format
+
+# echo
+```sh
+echo > file
+```
+empty file without deleting it
 
 
