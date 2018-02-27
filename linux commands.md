@@ -22,3 +22,7 @@ finds man topics only in command titles
 ```sh
 man -af <e.g. printf> 
 ``` 
+
+# whatis
+whatis <command, e.g. git>
+answears wheather provided command is installed or not
