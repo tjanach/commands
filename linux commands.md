@@ -14,9 +14,11 @@ finds all commands containing the keyword
 ```sh
 man -k <part of command name, e.g. printf> 
 ``` 
- 
 finds all man topics related to the keyword
 ```sh
 man -a <e.g. printf> 
 ``` 
-
+finds man topics only in command titles
+```sh
+man -af <e.g. printf> 
+``` 
