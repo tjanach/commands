@@ -1,3 +1,4 @@
+# man
 man [number] command
 + 1 - commands and applications
 + 2 - system calls
