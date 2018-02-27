@@ -40,3 +40,26 @@ answears whether provided command is installed or not
 which <command, e.g. git>
 ```
 finds path to command
+
+# history
+
+```sh
+history
+```
+presents commands issued by the user
+```sh
+export HISTTIMEFORMAT="%d/%m/%y %T "
+```
+lists commands with timestamp
+
+# disk usage
+```sh
+du <filenam or directory>
+```
+finds amount of space taken by the file or directory
+```sh
+du -h -max-deph=1 *
+```
+finds files or directories sizes in the current location in human readible format
+
+
