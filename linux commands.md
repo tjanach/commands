@@ -10,24 +10,28 @@ e.g.
 $ man 1 passwd
 $ man 5 passwd
 ```
+___
 finds all commands containing the keyword for which there exist man topics
 ```sh
 man -k <part of command name, e.g. printf> 
-``` 
+```
+___
 finds and displays all man topics related to the keyword
 ```sh
 man -a <e.g. printf> 
-``` 
+```
+___
 finds man topics only in command titles
 ```sh
 man -af <e.g. printf> 
-``` 
+```
+___
 updates man pages
 ```sh
 mandb - in ubuntu
 makewhatis - in red hat
 ```
-
+___
 # whatis
 ```sh
 whatis <command, e.g. git>
