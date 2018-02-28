@@ -182,5 +182,18 @@ value closed by "" - interpreted references to other variables
 ___
 ```sh
 echo ${HOME}/mydir
-```put in curly braces to avoid misinterpretation
+```
+put in curly braces to avoid misinterpretation
+___
+```sh
+env
+```
+displays all environment variables
+___
+## commands
+### cut
+```sh
+cut -d , -f 1,3 sample.csv
+```
+displays fields 1 and 3 from sample csv file, which is delimited by comma -d ,
 ___
