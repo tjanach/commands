@@ -194,6 +194,74 @@ ___
 ### cut
 ```sh
 cut -d , -f 1,3 sample.csv
+cut -d , -f 1,3 < sample.csv
+cat sample.csv | cut -d , -f 1,3 
 ```
 displays fields 1 and 3 from sample csv file, which is delimited by comma -d ,
+___
+
+### sort
++ -t delimiter
++ -r reverse order
++ -u unique lines
++ -b ignore leading spaces
++ -n numeric sorting
++ -d dictionary sorting
++ -k{column key start},{column key end}
+___
+```sh
+sort -t , -k1,1 sample.csv
+```
+sorts lines of the file based on specified keys (fields)
+___
+### uniq
++ displays each line once, even if lines are duplicated
++ input must be sorted first
++ -u displays only unique lines (that do not have duplicates)
++ -d displays duplicated lines
++ -c count output lines
+___
+```sh
+cat example.csv | sort -t , -k1,1 | uniq -d 
+```
+displays duplicated lines
+___
+### wc - word count
++ counts words, lines, characters
++ -l for lines
++ -w for words
++ -c for characters
+___
+```sh
+wc -l -w -c -L example.csv
+cat example.csv | wc -l -w -c -L 
+```
+displays number of lines, words, characters, max line legth
+___
+### tee
++ print to STDOUT while also being writen to a file
+___
+```sh
+find / -name *.log | tee output.txt 
+```
+displays the result on screen and to file
+___
+
+### tail
++ print last lines of the file
+___
+```sh
+tail output.txt 
+```
+displays 10 last lines of the file
+```sh
+tail -5 output.txt 
+tail --lines=5 output.txt 
+```
+displays 5 last lines of the file
+
+```sh
+tail --lines=-3 output.txt 
+```
+displays all lines except the first 3 of the file
 ___
