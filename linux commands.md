@@ -73,4 +73,31 @@ echo > file
 ```
 empty file without deleting it
 
+# dpkg
++ does not have dependencies
+___
+```sh
+dpkg --install <package>
+```
+installs package if it does not have dependencies
+___
+
+```sh
+dpkg --remove <package>
+```
+removes package if it does not have dependencies
+___
+```sh
+dpkg -l
+```
+lists all installed packages
+___
+```sh
+dpkg -l | grep vim
+```
+lists installed packages related to vim
+___
+
+
+
 
