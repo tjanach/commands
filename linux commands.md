@@ -148,8 +148,39 @@ ___
 ## processes
 ___
 ```sh
+ps -ef | grep 
+```
+displays the info about all running processes in the system
+___
+```sh
 ls -l /proc | grep 
 ```
 displays the info about all running processes in the system
 /proc is a virtual directory
+
+```sh
+ls -l /proc/pid/fd | grep 
+```
+displays info about file descriptors used by the process pid
+___
+## variables
++ no space between varname and value
+___
+```sh
+myvar=VarValue
+echo $myvar
+```
+sets and displays the variable
+___
+```sh
+myvar2='My variable text'
+myvar3="My variable text $myvar2"
+echo $myvar
+```
+value closed by '' - not interpreted
+value closed by "" - interpreted references to other variables
+___
+```sh
+echo ${HOME}/mydir
+```put in curly braces to avoid misinterpretation
 ___
