@@ -98,7 +98,8 @@ dpkg -l | grep vim
 lists installed packages related to vim
 ___
 
-# apt-get (Debian/Ubuntu) 
+# apt (Debian/Ubuntu) 
+## apt-get
 + manages dependencies
 + repos are in /etc/apt/sources.list
 ___
@@ -108,5 +109,13 @@ sudo apt-get update
 updates the repositories, do it before installation!!!
 ___
 
-
-
+## apt-mirror
++ allows to create local repo for apt-get
++ config file in /etc/apt/mirror-list
++ default download folder is /var/spool/apt-mirror
+___
+```sh
+sudo apt-mirror
+```
+downloads the entire repo from Internet - long process, requires 50G on disk
+___
