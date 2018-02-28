@@ -108,6 +108,30 @@ sudo apt-get update
 ```
 updates the repositories, do it before installation!!!
 ___
+```sh
+sudo apt-get upgrade -yes
+sudo apt-get dist-upgrade -yes
+```
+upgrades - installs the up-to-date packages, already installed in the system!!!
+yes option, confirms all asks from the program
+can be done as a cron job
+dist-upgrade - can remove packages, no longer compatible with the system
+___
+___
+```sh
+sudo apt-get --download-only
+```
+only download required packages, that can be installed, updated latter on
+the default folder for downloaded packages is: var/cache/apt
+```sh
+sudo apt-get install or update /var/cache/apt/package
+```
+installs or updates specific downloaded package
+```sh
+sudo apt-get autoclean
+```
+cleans the cache
+___
 
 ## apt-mirror
 + allows to create local repo for apt-get
