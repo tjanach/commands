@@ -98,6 +98,15 @@ dpkg -l | grep vim
 lists installed packages related to vim
 ___
 
+# apt-get (Debian/Ubuntu) 
++ manages dependencies
++ repos are in /etc/apt/sources.list
+___
+```sh
+sudo apt-get update
+```
+updates the repositories, do it before installation!!!
+___
 
 
 
