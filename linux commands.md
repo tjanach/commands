@@ -143,3 +143,13 @@ sudo apt-mirror
 ```
 downloads the entire repo from Internet - long process, requires 50G on disk
 ___
+
+# shell scripting
+## processes
+___
+```sh
+ls -l /proc | grep 
+```
+displays the info about all running processes in the system
+/proc is a virtual directory
+___
