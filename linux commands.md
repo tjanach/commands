@@ -426,11 +426,11 @@ exit 0
 ```
 ___
 ### testing for file attributes
++ provided into test command, which is called in if statement
 + -d direcory - is directory
 + -e file - file exists
 + -f file - file exists and is regular file (not a block device)
 + -r file - file is readable
 + -s file - file is not empty
 + -w file - file is writable
-
 ___
