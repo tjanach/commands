@@ -411,7 +411,7 @@ ___
 + spaces after [ and before ] !!!! 
 + -eq, -ne, -gt, -lt, -gte, -lte for numbers
 + =, != for strings
-
++ all operator in man test
 ```sh
 #!/bin/bash
 if [[ $# -eq 0 ]]; then
@@ -425,4 +425,12 @@ fi
 exit 0
 ```
 ___
+### testing for file attributes
++ -d direcory - is directory
++ -e file - file exists
++ -f file - file exists and is regular file (not a block device)
++ -r file - file is readable
++ -s file - file is not empty
++ -w file - file is writable
 
+___
