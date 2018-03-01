@@ -381,4 +381,48 @@ echo "hello:" $1
 exit 0
 ```
 ___
+### shell functions
++ function funtion_name {code}
++ can be added to .bash_profile and can be used as commands, aliases
++ all variables are global, and can be accessed by functions
++ functions can have local variables, local var_name=var_value
+```sh
+#!/bin/bash
+function usage {
+        echo "usage: " $0 "user_name"
+}
+echo "script name: " $0
+echo "parameter 1: " $1
+echo "parameter 2: " $2
+echo "parameter 3: " $3
+echo "parameter 4: " $4
+echo "parameters #: " $#
+echo "parameters *: " $*
+
+if [[ $# -eq 0 ]]; then
+        usage
+        exit 1
+fi
+echo "hello:" $1
+exit 0
+```
+___
+### if statement
++ spaces after [ and before ] !!!! 
++ -eq, -ne, -gt, -lt, -gte, -lte for numbers
++ =, != for strings
+
+```sh
+#!/bin/bash
+if [[ $# -eq 0 ]]; then
+        command_A
+        exit 1
+elif [[ cond ]]
+        command_B
+else
+        command_C
+fi
+exit 0
+```
+___
 
