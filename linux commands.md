@@ -299,7 +299,7 @@ tail -15 -f --pis=PID output.txt
 displays last 15 lines of the file, keep the file open, command is closed when the process PID is finished
 ___
 ### grep
-+ searches for text in stdin and stdout
++ searches for text in stdin and output the results into stdout
 + regular expressions can be provided
 + -c counts the number of matches
 + -i ignore case when searching
@@ -311,3 +311,67 @@ ___
 grep "text to searched" 
 ```
 searches for provided text
+
+```sh
+ps -ef | grep -v grep | grep watchdog -c 
+```
+counts the number of watchdog processes, excluding grep proccess
+___
+## shell scripting
++ # is a comment
++ ; semicolon is used to separate commands in the same line
++ #!/bin/bash - put at the beggining to make the script selfexecutable
++ selfexecutable scripts require to chmod +x script.sh
+
+```sh
+sh script.sh
+./script.sh
+```
+script execution
+___
+### printf vs echo
+```sh
+printf "Hello\n"
+echo "Hello\n"
+```
+printf interprets special characters \t \n, etc, echo does not
+
+```sh
+echo -e "Hello\n"
+```
+echo -e interprets the special characters
+```sh
+echo -n "Enter your name:"
+```
+echo -n stays in the same line, useful fro providing input from user
+___
+### read
+```sh
+read variable_name
+```
+reads the input from the user and sets the variable
+```sh
+#!/bin/bash
+echo -n "Please provide your name: "
+read user_name
+echo "Hello " $user_name
+```
+___
+### scripts arguments
++ $0 name of the script file
++ $1, $2, $3 ... - consecutive arguments
++ $# - number of arguments passed to the script
++ $* - all arguments as a one string
+
+```sh
+#!/bin/bash
+echo "script name: " $0
+echo "parameter 1: " $1
+echo "parameter 2: " $2
+echo "parameter 3: " $3
+echo "parameter 4: " $4
+echo "parameters #: " $#
+echo "parameters *: " $*
+```
+___
+
