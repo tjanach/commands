@@ -246,6 +246,24 @@ find / -name *.log | tee output.txt
 ```
 displays the result on screen and to file
 ___
+### head
++ print first lines of the file
+___
+```sh
+head output.txt 
+```
+displays 10 first lines of the file
+```sh
+head -5 output.txt 
+head --lines=5 output.txt 
+```
+displays 5 first lines of the file
+
+```sh
+head --lines=-3 output.txt 
+```
+displays all lines except the last 3 lines of the file
+___
 
 ### tail
 + print last lines of the file
@@ -264,4 +282,32 @@ displays 5 last lines of the file
 tail --lines=-3 output.txt 
 ```
 displays all lines except the first 3 of the file
+
+```sh
+tail --lines=+15 output.txt 
+```
+displays all last lines starting from 15th line of the file
+
+```sh
+tail --lines=+2 output.txt | sort -t , -k1,1 
+```
+sorting without the geader line
+
+```sh
+tail -15 -f --pis=PID output.txt 
+```
+displays last 15 lines of the file, keep the file open, command is closed when the process PID is finished
 ___
+### grep
++ searches for text in stdin and stdout
++ regular expressions can be provided
++ -c counts the number of matches
++ -i ignore case when searching
++ -v matches if text is not present
++ -l prints file names containing the matched text
++ -R performs recursive search, in the current directory and in all subdirectories
+___
+```sh
+grep "text to searched" 
+```
+searches for provided text
