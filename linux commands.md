@@ -372,6 +372,13 @@ echo "parameter 3: " $3
 echo "parameter 4: " $4
 echo "parameters #: " $#
 echo "parameters *: " $*
+
+if [[ $# -eq 0 ]]; then
+        echo "usage: " $0 "user_name"
+        exit 1
+fi
+echo "hello:" $1
+exit 0
 ```
 ___
 
