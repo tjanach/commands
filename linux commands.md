@@ -411,7 +411,7 @@ ___
 + spaces after [ and before ] !!!! 
 + -eq, -ne, -gt, -lt, -gte, -lte for numbers
 + =, != for strings
-+ all operator in man test
++ all operators in man test
 ```sh
 #!/bin/bash
 if [[ $# -eq 0 ]]; then
@@ -433,4 +433,63 @@ ___
 + -r file - file is readable
 + -s file - file is not empty
 + -w file - file is writable
+___
+### looping
++ for..in
+```sh
+#!/bin/bash
+for i in user1 user2 uesr3; do
+    echo $i
+done
+exit 0
+```
+___
++ for..in with globing
+```sh
+#!/bin/bash
+for f in *.log; do
+    gzip $f
+done
+exit 0
+```
+globing files using *, ?,
+___
++ classic for loop
+```sh
+#!/bin/bash
+for (( i=0; i<$count; i++ )); do
+    echo $i
+done
+exit 0
+```
+___
++ while loop
+```sh
+#!/bin/bash
+while [[ condition ]]; do
+    code
+done
+exit 0
+```
+___
++ while loop with delay
+```sh
+#!/bin/bash
+while true; do
+    code
+    sleep n seconds
+done
+exit 0
+```
+___
++ while loop waiting for Y
+```sh
+#!/bin/bash
+input
+while [[ $input != 'Y' ]]; do
+    echo -n "Enter Y for continue "
+    read input
+done
+exit 0
+```
 ___
