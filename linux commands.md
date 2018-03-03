@@ -493,3 +493,18 @@ done
 exit 0
 ```
 ___
+### running a script in the background
++ ampersand at the end
+```sh
+./script.sh &
+```
+___
++ jobs -l - lists all bg processes/scripts
+```sh
+jobs -l
+fg %1
+ctrl+z - to stop the job
+bg %1 - to run the job again in the background
+```
+fg moves the job %1 to foreground and you can ctrl+c
+bg moves the job %1 to background (job must be stoped by ctrl+z)
