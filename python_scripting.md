@@ -21,8 +21,8 @@ input = raw_input()
 print ("Hello "+input)
 ```
 + if statement 
-++ indentation 4 spaces !!!
-++ colon (:) before code
+    + indentation 4 spaces !!!
+    + colon (:) before code
 ```python
 #!/usr/bin/python
 if condition:
