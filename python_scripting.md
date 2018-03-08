@@ -1,4 +1,7 @@
+# Python 2 scripting
+
++ in order to check python version
 ```sh
-$ man 1 passwd
-$ man 5 passwd
+$ python -V
 ```
+
