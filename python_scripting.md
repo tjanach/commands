@@ -12,3 +12,12 @@ $ python
 ```sh
 ctrl+d
 ```
++ simpl einput script
+
+```python
+#!/usr/bin/python
+
+print ("Please enter your name: ")
+input = raw_input()
+print ("Hello "+input)
+```
