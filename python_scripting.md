@@ -57,7 +57,8 @@ for item in item_sequence:
     code
 while (condition):
     code
-    
+
+import time #is necessary
 while (True):
     code
     time.sleep(1s)
@@ -70,3 +71,11 @@ for arg in sys.argv:
     print ("Arg "+str(i)+" is "+ arg)
     i = i + 1
 ```
++ interaction with system shell
+```python
+#!/usr/bin/python
+import subprocess
+output = subprocess.call(["ls","-l"])
+print output
+```
+
