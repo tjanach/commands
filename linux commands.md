@@ -316,6 +316,16 @@ searches for provided text
 ps -ef | grep -v grep | grep watchdog -c 
 ```
 counts the number of watchdog processes, excluding grep proccess
+
+___
+
+### fdisk
++ 
+___
+```sh
+fdisk -l 
+```
+lists existing disks
 ___
 ## shell scripting
 + # is a comment
