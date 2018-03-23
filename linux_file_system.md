@@ -1,5 +1,5 @@
 # file systems
-##useful comands
+## useful comands
 
 ### fdisk
 + to manipulate partitions
@@ -34,6 +34,8 @@ ___
 ### unmount
 + unmounts device or filesystem
 + -l option - lazy unmount, waits till all processes leave the unmounted filesystem
++ use fuser -vc /mountpoint to see processes using the filesystem 
++ use lsof -p /mountpoint  - to list open files
 ___
 ```sh
 unmount path/to/device 
