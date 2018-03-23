@@ -316,7 +316,18 @@ searches for provided text
 ps -ef | grep -v grep | grep watchdog -c 
 ```
 counts the number of watchdog processes, excluding grep proccess
+___
+## shell scripting
++ # is a comment
++ ; semicolon is used to separate commands in the same line
++ #!/bin/bash - put at the beggining to make the script selfexecutable
++ selfexecutable scripts require to chmod +x script.sh
 
+```sh
+sh script.sh
+./script.sh
+```
+script execution
 ___
 
 ### printf vs echo
