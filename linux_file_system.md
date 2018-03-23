@@ -1,20 +1,37 @@
+# file systems
+##useful comands
+
 ### fdisk
-+ 
++ to manipulate partitions
 ___
 ```sh
 fdisk -l 
 ```
-lists existing disks
+display partitions end exit
 ___
-## shell scripting
-+ # is a comment
-+ ; semicolon is used to separate commands in the same line
-+ #!/bin/bash - put at the beggining to make the script selfexecutable
-+ selfexecutable scripts require to chmod +x script.sh
 
+### df
++ Show information about the file system on which each FILE resides,
+or all file systems by default
+___
 ```sh
-sh script.sh
-./script.sh
+df -h <file> 
 ```
-script execution
+
+___
+### mount
++ mounts device to filesystem
++ to mount at start time - put into file /etc/fstab
+___
+```sh
+mount path/to/device /mountpoint
+```
+___
+### unmount
++ unmounts device or filesystem
+___
+```sh
+unmount path/to/device 
+unmount /mountpoint
+```
 ___
