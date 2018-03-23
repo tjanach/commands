@@ -26,9 +26,14 @@ ___
 ```sh
 mount path/to/device /mountpoint
 ```
+```sh
+mount -a
+```
+mounts everything in the /etc/fstab
 ___
 ### unmount
 + unmounts device or filesystem
++ -l option - lazy unmount, waits till all processes leave the unmounted filesystem
 ___
 ```sh
 unmount path/to/device 
