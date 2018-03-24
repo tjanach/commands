@@ -54,7 +54,6 @@ ln <src> <trg> - hard link
 ln -s <src> <trg> - symbolic link
 ln -l <file> - lists all links related to a file
 ```
-
 ___
 ### rmdir
 + removes empty dir
@@ -91,4 +90,14 @@ ___
 + umask is set per process, so also per terminal
 + umask 0022 means, that the permissions will be 777-022=755 for dirs, and 666-022=644 for files
 
+### acl - access control list
++ to control who has permissions to my files or dirs in more flexible way
++ mount -o acl /dev/sdb /mnt_point - must have the option -o acl
++ setfacl might be overwrite by chmod
+```sh
+getfacl <file> - displays all users:groups having access the file
+setfacl [-R] -m user:username:permissions  <file> - sets permissions to the file
+setfacl [-R] -m u:userA:rx  <file> - sets permissions to the file
+setfacl [-R] -m g:groupB:rw  <file> - sets permissions to the file
+```
 
