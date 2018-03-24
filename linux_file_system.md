@@ -42,3 +42,5 @@ unmount path/to/device
 unmount /mountpoint
 ```
 ___
+### man hier
++ shows info about file system hierarchy
