@@ -44,3 +44,22 @@ unmount /mountpoint
 ___
 ### man hier
 + shows info about file system hierarchy
+
+___
+### ln 
++ creates links to files
+
+```sh
+ln <src> <trg> - hard link
+ln -s <src> <trg> - symbolic link
+ln -l <file> - lists all links related to a file
+```
+
+___
+### rmdir
++ removes empty dir
+
+___
+### rm -r
++ removes dir recursively
+
