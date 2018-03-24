@@ -59,7 +59,18 @@ ___
 ### rmdir
 + removes empty dir
 
-___
 ### rm -r
 + removes dir recursively
+___
+### /dev
++ contains all devices
++ b - binary devices
++ c - char devices
++ udevd - demon connecting devices to the system
+
+___
+
+### unix domain sockets
++ internal sockets, used to interprocess communication
++ /proc/PID/fd - to see socket files
 
