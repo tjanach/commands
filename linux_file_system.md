@@ -73,4 +73,22 @@ ___
 ### unix domain sockets
 + internal sockets, used to interprocess communication
 + /proc/PID/fd - to see socket files
++ can be accessed only by processes
++ cannot be created by the users
+
+### named pipes
++ similar to system sockets, used to interprocess communication
++ can be created by users
++ are FIFO
++ mkfifo <pipe1>
++ ls -l - the pipe1 has letter p at the begining
++ on one terminal: script -f pipe1
++ on second terminal: cat pipe1
++ the output from the first terminal will be displayed on second one
+
+### umask
++ is used to control default permissions to newly created files and dirs
++ umask is set per process, so also per terminal
++ umask 0022 means, that the permissions will be 777-022=755 for dirs, and 666-022=644 for files
+
 
