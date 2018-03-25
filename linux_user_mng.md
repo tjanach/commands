@@ -74,4 +74,10 @@ ___
   + remove all files owned by the user
   + delete the user's group if emty
 + you must be shore that all processes related to the deleted user are removed from crontab
-  
+___
+## lock and unlock the user
+```sh
+usermod -L user - locks user account
+usermod -U user - unlocks user account
+```
+___
