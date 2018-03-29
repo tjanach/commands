@@ -29,8 +29,44 @@ ___
 + umount /mnt_point
 + mount -a - mount averything in /etc/fstab - to see if there are no errors and everything were mounted
 + df -h - check if the file system has been added
-
-
+___
+## mdadm - creation and management of RAID - disk array
++ fdisk -l to see if the new disk is attached (/dev/sdb..c..d)
++ fdisk /dev/sdx - create 1 primary partitions on each disk
++ create md0 - RAID
 ```sh
-finger root 
+mdadm --create /dev/md0 --level=5 --raid-devices=3 /dev/sdb1 /dev/sdc1 /dev/sdd1
+```
++ create fs on the md0 
+```sh
+mkfs -t ext4 /dev/md0
+```
++ mount the md0 
+```sh
+mount /dev/md0 /mnt
+```
++ current RAID configuration can be fount in /proc/mdstat file
++ to activate the RAID on startup - fill /etc/mdadm/mdadm.conf
+```sh
+mdadm --detail --scan >> /etc/mdadm/mdadm.conf
+```
++ to start RAID
+```sh
+mdadm -As /dev/md0
+```
++ to stop RAID
+```sh
+mdadm -S /dev/md0
+```
++ to mark faulty disk in RAID
+```sh
+mdadm /dev/md0 -f /dev/sdb1
+```
++ to remove faulty disk in RAID
+```sh
+mdadm /dev/md0 -r /dev/sdb1
+```
++ to add a new disk into RAID
+```sh
+mdadm /dev/md0 -a /dev/sdb1
 ```
