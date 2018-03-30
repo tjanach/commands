@@ -137,7 +137,28 @@ lvremove /dev/vgName/lvName-snap
 umount /dev/vgName/lvName-snap
 or 
 umount /lv_mount_point
-lvconvert ++merge /dev/vgName/lvName
+lvconvert --merge /dev/vgName/lvName-snap
 mount /dev/vgName/lvName /lv_mount_point
+```
+### extention of logical volume
++ is possible even when the logical volume is mounted
+```sh
+lvextend -L +100M /dev/vgName/lvName
+MUST BE FOLLOWED BY
+resize2fs /dev/vgName/lvName
+CHECK THE SIZE BY
+df -h
+```
+### shriking logical volume
++ must be unmounted
+```sh
+umount /dev/vgName/lvName
+MUST BE FOLLOWED BY
+resize2fs /dev/vgName/lvName 50M
+SYSTEM IS PROMPTING OF: e2fsck
+resize2fs /dev/vgName/lvName 50M
+lvreduce -L 50M /dev/vgName/lvName
+mount /dev/vgName/lvName /lv_mount_point
+df -h
 ```
 
