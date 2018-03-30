@@ -90,3 +90,54 @@ vgcreate vgName /dev/sdb1 /dev/sdc1 /dev/sdd1
 vgdisplay
 vgs - more concise output
 ```
++ creation of logical volume
+```sh
+lvcreate -L 100M -n lvName vgName
+```
++ display all logical volumes 
+```sh
+lvdisplay
+lvs - more concise output
+```
++ making fs on logical volume
+```sh
+mkfs -t ext4 /dev/vgName/lvName
+```
++ mount logical volume
+```sh
+mount /dev/vgName/lvName /lv_mount_point
+```
++ extension of volume group
+```sh
+pvcreate /dev/sde1 - added partition
+vgextend vgName /dev/sde1
+```
+### logical volume snapshot creation
++ unmount the logical volume
+```sh
+umount /lv_mount_point
+```
++ create snapshot
+```sh
+lvcreate -L 100M -s -n lvName-snap vgName/lvName 
+```
++ mount the snapshot to original mount point 
+```sh
+mount /dev/vgName/lvName-snap /lv_mount_point
+```
++ snapshot removal 
+```sh
+umount /dev/vgName/lvName-snap
+or 
+umount /lv_mount_point
+lvremove /dev/vgName/lvName-snap
+```
++ snapshot merged with the original logical volume 
+```sh
+umount /dev/vgName/lvName-snap
+or 
+umount /lv_mount_point
+lvconvert ++merge /dev/vgName/lvName
+mount /dev/vgName/lvName /lv_mount_point
+```
+
