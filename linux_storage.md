@@ -70,3 +70,23 @@ mdadm /dev/md0 -r /dev/sdb1
 ```sh
 mdadm /dev/md0 -a /dev/sdb1
 ```
+___
+## LVM
++ creation of physical volume
+```sh
+pvcreate /dev/sdb1
+```
++ display all physical volumes
+```sh
+pvdisplay
+pvs - more concise output
+```
++ volume group creation
+```sh
+vgcreate vgName /dev/sdb1 /dev/sdc1 /dev/sdd1 
+```
++ display all volume groups
+```sh
+vgdisplay
+vgs - more concise output
+```
