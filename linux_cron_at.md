@@ -38,7 +38,7 @@ crontab -l
 ```sh
 crontab -r
 ```
-+ the permissions to define crontabs are managed by /etc/cron.allow and /etc/cron/deny
++ the permissions to define crontabs are managed by /etc/cron.allow and /etc/cron.deny
   + if the file for a user exits in /var/spool/cron/<user> - it will be executed regardless of the above permission files
 + crontab keywords:
   + @yearly = 0 0 1 1 *
@@ -56,4 +56,26 @@ ___
   + now + 10 min
 + when at command is issued, inteactive shell is provided for entering the commands
   + Ctrl+D when finished
-+ 
++ list all at jobs
+```sh
+at -l 
+atq
+```
++ remove at job
+```sh
+at -d <job number> 
+atrm <job number>
+```
++ to provide a script as a command
+```sh
+at -f <script_path> now + 30 min 
+```
++ at shortcuts
+  + noon, midnightm, teatime, tomorrow, next week, next wednesday, fri, saturday
+  + now + 1 week/hour/day/month/year/hour/min
++ the permissions to at are managed by /etc/at.allow and /etc/at.deny
+  
+## batch is a similar command
++ but can trigger the execution at special condition, e.g. CPU load falls below 1.5
+  
+  
