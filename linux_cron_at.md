@@ -1,5 +1,5 @@
 # cron and at jobs
-# cron 
+## cron 
 + is controlled by crond demon as system boots
 + is uses configuration files located per each user in /var/spool/cron
   + each file is named as the user login name, whoc reated his own cron tab
@@ -46,9 +46,14 @@ crontab -r
   + @daily = 0 0 * * *
   + @hourly = 0 * * * *
   + @reboot - at system startup
-+ by default crond sends emails to the user who created the crontab
++ by default crond sends emails (with commands' output) to the user who created the crontab
   + can redirected to another user using MAIL="root" in the crontabfile, at the begining
   + MAIL="" to disable sending emails
-
-
-
+___
+## at
++ used to execute a command or srcipt once at a specified time
+  + 1 am December 25
+  + now + 10 min
++ when at command is issued, inteactive shell is provided for entering the commands
+  + Ctrl+D when finished
++ 
