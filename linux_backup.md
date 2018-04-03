@@ -60,3 +60,13 @@ nc -l 20000 | tar -cvf -
 ```sh
 tar -cvf - file(s) | nc server_ip 20000 
 ```
+## cp
++ very fast, for simple backups
++ a switch to use archive mode, preserving permissions and other file atributes
++ R for dirs
++ x be in the same filesystem
+```sh
+cp -ax source destination
+cp -axR source destination
+```
+
