@@ -33,3 +33,30 @@ TOTAL=$((TOTAL/1024/1024))
 echo "Total is" $TOTAL " GB"
 echo "Total used is" $USED " GB"
 ```
+
+## simple script to compute sum of sizes of modified files
+```sh
+#!/bin/bash
+SUM=0
+FILES=`find / -mount -type f -mtime -1 | xargs du -k | awk '{print $1}'`
+
+for i in $FILES; do
+  SUM=$((SUM = $i))
+done
+# convert to MB
+SUM=$((SUM/1024))
+# send email to root
+
+echo "$SUM MB" | mail -s "$HOSTNAME free space" root 
+```
+
+## netcat can be used to do a backup on the remote machine
++ it is not ssl-based
++ on the remote server listen to port e.g. 20000 and use tar or dump able to receive incoming files
+```sh
+nc -l 20000 | tar -cvf -
+```
++ on the client site
+```sh
+tar -cvf - file(s) | nc server_ip 20000 
+```
