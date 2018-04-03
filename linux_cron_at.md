@@ -34,7 +34,21 @@ crontab -e -u <user>
 ```sh
 crontab -l
 ```
-
++ remove the user's crontab
+```sh
+crontab -r
+```
++ the permissions to define crontabs are managed by /etc/cron.allow and /etc/cron/deny
+  + if the file for a user exits in /var/spool/cron/<user> - it will be executed regardless of the above permission files
++ crontab keywords:
+  + @yearly = 0 0 1 1 *
+  + @monthly = 0 0 1 * * 
+  + @daily = 0 0 * * *
+  + @hourly = 0 * * * *
+  + @reboot - at system startup
++ by default crond sends emails to the user who created the crontab
+  + can redirected to another user using MAIL="root" in the crontabfile, at the begining
+  + MAIL="" to disable sending emails
 
 
 
