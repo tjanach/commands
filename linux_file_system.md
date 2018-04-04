@@ -31,15 +31,15 @@ mount -a
 ```
 mounts everything in the /etc/fstab
 ___
-### unmount
+### umount
 + unmounts device or filesystem
 + -l option - lazy unmount, waits till all processes leave the unmounted filesystem
 + use fuser -vc /mountpoint to see processes using the filesystem 
 + use lsof -p /mountpoint  - to list open files
 ___
 ```sh
-unmount path/to/device 
-unmount /mountpoint
+umount path/to/device 
+umount /mountpoint
 ```
 ___
 ### man hier
